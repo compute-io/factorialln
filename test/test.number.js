@@ -45,7 +45,7 @@ describe( 'number factorialln', function tests() {
 		assert.ok( val !== val );
 
 		// non-integer
-		var val = factorialln( -2.7 );
+		val = factorialln( -2.7 );
 		assert.isNumber( val );
 		assert.ok( val !== val );
 	});
