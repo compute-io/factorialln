@@ -7,7 +7,7 @@ factorialln
  Computes the natural logarithm of the factorial, i.e.
 
 <div class="equation" align="center" data-raw-text="f(n)=\ln (n!)" data-equation="eq:factorialln_equation">
-	<img src="" alt="Equation of the natural logarithm of the factorial.">
+	<img src="https://cdn.rawgit.com/compute-io/factorialln/08d90469eae895608c4e2a3f14265dafb1c20083/docs/img/eqn.svg" alt="Equation of the natural logarithm of the factorial.">
 	<br>
 </div>
 
