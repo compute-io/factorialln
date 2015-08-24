@@ -13,7 +13,7 @@ var data,
 // Plain arrays...
 data = new Array( 10 );
 for ( i = 0; i < data.length; i++ ) {
-	data[ i ] = Math.round( Math.random()*100 );
+	data[ i ] = Math.round( Math.random() * 100 );
 }
 out = factorialln( data );
 console.log( 'Arrays: %s\n', out );

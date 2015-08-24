@@ -1,6 +1,6 @@
 factorialln
 ===
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
 > Computes an element-wise natural log factorial.
 
@@ -47,7 +47,7 @@ out = factorialln( 3 );
 
 // Generalized for real numbers:
 out = factorialln( 2.4 );
-// returns 1.092
+// returns ~1.092
 
 // Not defined for negative numbers:
 out = factorialln( -1 );
@@ -77,9 +77,9 @@ mat = matrix( data, [3,2], 'float64' );
 
 out = factorialln( mat );
 /*	returns approximately
-	[ 0     0
-      0.693 1.792
-      3.178 4.787 ]
+	[  0      0
+      ~0.693 ~1.792
+      ~3.178 ~4.787 ]
 */
 ```
 
@@ -123,7 +123,10 @@ var data = [
 	{'x':[4,4]}
 ];
 
-var out = factorialln( data, 'x|1', '|' );
+var out = factorialln( data, {
+	'path': 'x|1',
+	'sep': '|'
+});
 /*
 	[
 		{'x':[0,0]},
@@ -190,10 +193,10 @@ mat = matrix( data, [3,2], 'float64' );
 out = factorialln( mat, {
 	'copy': false
 });
-/*	returns approximately
-	[ 0     0
-      0.693 1.792
-      3.178 4.787 ]
+/*
+	[  0      0
+	  ~0.693 ~1.792
+	  ~3.178 ~4.787 ]
 */
 
 bool = ( mat === out );
@@ -285,7 +288,7 @@ var data,
 // Plain arrays...
 data = new Array( 10 );
 for ( i = 0; i < data.length; i++ ) {
-	data[ i ] = Math.round( Math.random()*100 );
+	data[ i ] = Math.round( Math.random() * 100 );
 }
 out = factorialln( data );
 
@@ -392,8 +395,8 @@ Copyright &copy; 2015. The [Compute.io](https://github.com/compute-io) Authors.
 [travis-image]: http://img.shields.io/travis/compute-io/factorialln/master.svg
 [travis-url]: https://travis-ci.org/compute-io/factorialln
 
-[coveralls-image]: https://img.shields.io/coveralls/compute-io/factorialln/master.svg
-[coveralls-url]: https://coveralls.io/r/compute-io/factorialln?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/github/compute-io/factorialln/master.svg
+[codecov-url]: https://codecov.io/github/compute-io/factorialln?branch=master
 
 [dependencies-image]: http://img.shields.io/david/compute-io/factorialln.svg
 [dependencies-url]: https://david-dm.org/compute-io/factorialln
